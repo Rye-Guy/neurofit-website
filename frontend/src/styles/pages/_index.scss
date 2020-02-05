@@ -1,0 +1,43 @@
+.main{
+    margin-top: -13
+    rem;
+    padding: 7.2rem;
+}
+
+.our-vision{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: -5rem;
+    max-width: 92rem;
+    
+
+    &__heading{
+        font-size: 4.2rem;
+        font-weight: bold;
+        padding: 2.4rem;
+    }
+
+    &__sub-heading{
+        text-align: left;
+        font-size: 3.2rem;
+    }
+
+    &__paragraph{
+        text-align: left;
+        width: 56.2rem;
+        font-size: 2.4rem;
+    }
+}
+
+.content-divider{
+    border-bottom: 3px solid $color-grey-light;
+    border-radius: 20%;
+    max-width: 110rem;
+    margin: 8rem auto;
+}
+
+.down-arrow{
+    display: flex;
+    justify-content: center;
+    margin: 4.2rem;
+}

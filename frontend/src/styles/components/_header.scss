@@ -1,0 +1,87 @@
+.header{
+
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -102px;
+    justify-content: center;
+
+
+    &__logo{
+        position: relative;
+        z-index: 1;    
+    }
+
+    &__title{
+
+        margin-left: 8rem;
+        width: 40%;
+        position: relative;
+        z-index: 1;
+    
+
+        &--main{
+            font-size: 4.2rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: $color-white;
+            text-align: center;         
+        }
+
+        &--sub{
+            font-size: 2.4rem;
+            letter-spacing: 2px;
+            color: $color-white;
+            text-align: center;
+        }
+
+    }
+
+    &__cta{
+
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin: 1.6rem;
+        transform: translateY(18px);
+        transition: ease-in-out .2s; 
+        
+        
+        &__btn{
+            padding: 1.8rem 3.2rem;
+            background-color: $color-grey-dark;
+            width: 210px;
+            border-radius: .8rem;
+
+            &:not(:last-child){
+                margin-right: 1.6rem;
+            }
+
+            &:hover{
+                background-color: $color-grey-light;
+            }
+        }
+
+        &__text{
+            text-decoration: none;
+            font-size: 1.8rem;
+            color: $color-white;
+        }
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        background-image: linear-gradient(
+            to right bottom,
+            rgba(black, 0.25),
+            rgba(black, 0.5));
+        opacity: 0.75;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+    }
+}
