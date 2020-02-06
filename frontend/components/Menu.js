@@ -51,7 +51,7 @@ class Menu extends Component {
             {menu.items.map(item => {
               if (item.object === 'custom') {
                 return (
-                  <a className={path == item.url ? 'navbar__items navbar__item--active' : 'navbar__items'} href={item.url} key={item.ID}>{item.title}</a>
+                  <a className={path == item.url ? 'navbar__item navbar__item--active' : 'navbar__item'} href={item.url} key={item.ID}>{item.title}</a>
                 );
               }
               const slug = getSlug(item.url);
