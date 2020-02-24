@@ -3,11 +3,11 @@
     "title": "home",
     "fields": [
         {
-            "key": "field_5e30ea0760efd",
-            "label": "Header Image",
-            "name": "header_image",
+            "key": "field_5e3c219cb7dd7",
+            "label": "Company Logo",
+            "name": "company_logo",
             "type": "image",
-            "instructions": "Background image for header.",
+            "instructions": "svg company logo",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -16,126 +16,7 @@
                 "id": ""
             },
             "return_format": "url",
-            "preview_size": "full",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_5e31d2343e16e",
-            "label": "Header Main Heading",
-            "name": "header_main_heading",
-            "type": "text",
-            "instructions": "h1 for homepage",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5e3725f232d7d",
-            "label": "Header Sub Heading",
-            "name": "header_sub_heading",
-            "type": "text",
-            "instructions": "h2 for homepage",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5e3a1aad9498f",
-            "label": "Our Vision Heading",
-            "name": "our_vision_heading",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5e3a1af394990",
-            "label": "Our Vision Sub Heading",
-            "name": "our_vision_sub_heading",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5e3a1b3394991",
-            "label": "Our Vision Paragraph",
-            "name": "our_vision_paragraph",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5e3b8e688f37d",
-            "label": "Our Vision Background Vector",
-            "name": "our_vision_background_vector",
-            "type": "image",
-            "instructions": "Vector image for page background",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "preview_size": "full",
+            "preview_size": "medium",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -146,10 +27,10 @@
             "mime_types": "svg"
         },
         {
-            "key": "field_5e3a1b5194992",
-            "label": "How It Works Heading",
-            "name": "how_it_works_heading",
-            "type": "text",
+            "key": "field_5e4c18a1484cc",
+            "label": "Header Content",
+            "name": "header_content",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -158,116 +39,12 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5e3a1bbb94993",
-            "label": "How It Works Sub Heading",
-            "name": "how_it_works_sub_heading",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5e3a1e62e1fae",
-            "label": "How it Works Paragraph",
-            "name": "how_it_works_paragraph",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5e3a1cad94995",
-            "label": "Arrow",
-            "name": "arrow",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_5e3a3aeb8d7b3",
-            "label": "How It Works Items Title",
-            "name": "how_it_works_items_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5e3a258557c1e",
-            "label": "How It Works Items",
-            "name": "how_it_works_items",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "row",
-            "button_label": "",
+            "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5e3a25c057c1f",
-                    "label": "How it works heading",
-                    "name": "how_it_works_heading",
+                    "key": "field_5e4c18ca484cd",
+                    "label": "Normal Text",
+                    "name": "normal_text",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -284,10 +61,10 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5e3a262757c20",
-                    "label": "How it works image",
-                    "name": "how_it_works_image",
-                    "type": "image",
+                    "key": "field_5e4c18e7484ce",
+                    "label": "Strong Text",
+                    "name": "strong_text",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -296,21 +73,80 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
-                    "key": "field_5e3a263857c21",
-                    "label": "How it works paragraph",
-                    "name": "how_it_works_paragraph",
+                    "key": "field_5e4c193f484cf",
+                    "label": "Contact Info",
+                    "name": "contact_info",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e4c19be484d0",
+                    "label": "featured brands logo",
+                    "name": "featured_brands_logo",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e4c1ae2484d2",
+                            "label": "featured brands logo",
+                            "name": "featured_brands_logo",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5e4c19f0484d1",
+                    "label": "formerly text",
+                    "name": "formerly_text",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -329,28 +165,9 @@
             ]
         },
         {
-            "key": "field_5e3af1936462b",
-            "label": "Process Items Title",
-            "name": "process_items_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5e3af19c6462c",
-            "label": "Process Items",
-            "name": "process_items",
+            "key": "field_5e4c48b4e34a6",
+            "label": "Feature_Items",
+            "name": "feature_items",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -360,17 +177,17 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "field_5e3af3186462d",
+            "collapsed": "",
             "min": 0,
             "max": 0,
             "layout": "table",
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_5e3af3186462d",
-                    "label": "Process Item Title",
-                    "name": "process_item_title",
-                    "type": "text",
+                    "key": "field_5e4c48bfe34a7",
+                    "label": "Feature_Item",
+                    "name": "feature_item",
+                    "type": "group",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -379,16 +196,93 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e4c48e3e34a8",
+                            "label": "Feature Heading",
+                            "name": "feature_heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5e4c492ae34a9",
+                            "label": "Feature Paragraph",
+                            "name": "feature_paragraph",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5e4c4935e34aa",
+                            "label": "Feature Image",
+                            "name": "feature_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_5e4da97b746f4",
+            "label": "Breadcrumb Section",
+            "name": "breadcrumb_section",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
                 {
-                    "key": "field_5e3af3376462e",
-                    "label": "Process Item Image",
-                    "name": "process_item_image",
+                    "key": "field_5e4da988746f5",
+                    "label": "Background Image",
+                    "name": "background_image",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -410,9 +304,28 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_5e3af35c6462f",
-                    "label": "Process Item Paragraph",
-                    "name": "process_item_paragraph",
+                    "key": "field_5e4da997746f6",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e4da99d746f7",
+                    "label": "Paragraph",
+                    "name": "paragraph",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -431,9 +344,9 @@
             ]
         },
         {
-            "key": "field_5e3af37664630",
-            "label": "Image Composition Section",
-            "name": "image_composition_section",
+            "key": "field_5e4da9ad746f8",
+            "label": "Game Images",
+            "name": "game_images",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -443,16 +356,16 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "field_5e3af39c64631",
+            "collapsed": "",
             "min": 0,
             "max": 0,
             "layout": "table",
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_5e3af39c64631",
-                    "label": "image",
-                    "name": "image",
+                    "key": "field_5e4da9be746f9",
+                    "label": "Game Image",
+                    "name": "game_image",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -462,7 +375,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "return_format": "url",
                     "preview_size": "medium",
                     "library": "all",
                     "min_width": "",
@@ -472,32 +385,27 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": ""
+                },
+                {
+                    "key": "field_5e4da9c8746fa",
+                    "label": "Image Heading",
+                    "name": "image_heading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
-        },
-        {
-            "key": "field_5e3af46ac57e1",
-            "label": "Headset_image",
-            "name": "headset_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
         },
         {
             "key": "field_5e3af48dc57e2",
@@ -550,6 +458,192 @@
                     "placeholder": ""
                 }
             ]
+        },
+        {
+            "key": "field_5e4ed4a791616",
+            "label": "Process Section",
+            "name": "process_section",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5e4ed4b691617",
+                    "label": "Process Heading",
+                    "name": "process_heading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e4ed4c091618",
+                    "label": "Process Paragraph",
+                    "name": "process_paragraph",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e4ed4c791619",
+                    "label": "Process Background",
+                    "name": "process_background",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5e4ed4d99161a",
+                    "label": "Process Items",
+                    "name": "process_items",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e4ed4e69161b",
+                            "label": "Process Heading",
+                            "name": "process_heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5e4ed4f89161c",
+                            "label": "Process Paragraph",
+                            "name": "process_paragraph",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5e4ed5009161d",
+                            "label": "Process Image",
+                            "name": "process_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5e4ed5369161e",
+                            "label": "Process Icon",
+                            "name": "process_icon",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "location": [
@@ -569,5 +663,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1580961490
+    "modified": 1582224710
 }

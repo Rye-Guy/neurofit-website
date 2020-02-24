@@ -17,88 +17,85 @@ class Menu extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      path: String,
-      yScroll: 0,
+      path: 0,
+      currentYScroll: 0,
+      previousYScroll: 0,
+      
     };
+    this.navRef = React.createRef();
+    
   }
 
   componentDidMount() {
     this.setState({
-      path: window.location.pathname
+      path: window.location.pathname,
+      previousYScroll: window.scrollY
     })
+    // this.updateScrollPositionToState()
   }
+  // //make these more isolated? Perhaps functions that would return ture of false and updated precviousScoll seperately.
+  // updateScrollPositionToState = () =>{
+  //   window.addEventListener('scroll', (e)=>{
+  //     this.setState({
+  //       currentYScroll: window.scrollY
+  //     })
+  //     this.addStickyPosition()
+  //   })
+  // }
 
-
+  // addStickyPosition = () =>{
+  //   if(this.state.currentYScroll < this.state.previousYScroll){  
+  //     this.navRef.current.className = 'navbar navbar--sticky'
+  //   }else if(this.navRef){
+  //     this.navRef.current.className = 'navbar navbar--fadeout'
+  //   }
+  //   this.setState({
+  //     previousYScroll: window.scrollY
+  //   }) 
+  // }
 
   render() {
-    const { menu } = this.props;
+    const { menu, companyLogo } = this.props;
     const { path } = this.state;
     return (
-      <div className="navbar">
-        <div className="navbar__content">
-          <div className="navbar__logo">
-            <Link href="/">
-              <a className="navbar__logo-link">
-                <Logo width={72} height={72}/>
-                <div className="navbar__logo-text">
-                  NeurofitFit VR<br/>
-                  Redefine Rehabilitation 
+      <header className="header_area">
+        <nav className="navbar navbar-expand-lg menu_one" data-spy="affix" data-offset-top="70"  ref={this.navRef}>
+            <div className="container-fluid">
+              <div className="navbar-brand">
+                <Link href="/"><a className="navbar-brand"><img src={companyLogo} width={72} height={72}/></a></Link>
+              </div>
+                <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="menu_toggle">
+                        <span className="hamburger">
+                           <span></span>
+                            <span></span>
+                            <span></span>
+                       </span>
+                       <span className="hamburger-cross">
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </span>
+              </button>
+              <div className="collapes navbar-collapse" id="navbarSupportedContent">
+                <ul className="navbar-nav m-auto menu">
+                  {menu.items.map((item, i) => {
+                    if (item.object === 'custom') {
+                      return (
+                        <li key={i} className="nav-item">
+                          <a className={path == item.url ? 'nav-link' : 'nav-link'} href={item.url} key={item.ID}>{item.title}</a>
+                        </li>
+                      );
+                    }
+                  })}
+                </ul>
+                <div className="tracking_btn">
+                  <a className="er_btn btn_hover" href="#get-app">Request A Demo</a>
                 </div>
-              </a>
-            </Link>
+              </div>
           </div>
-          <div className="navbar__items">
-            {menu.items.map(item => {
-              if (item.object === 'custom') {
-                return (
-                  <a className={path == item.url ? 'navbar__item navbar__item--active' : 'navbar__item'} href={item.url} key={item.ID}>{item.title}</a>
-                );
-              }
-              const slug = getSlug(item.url);
-              const actualPage = item.object === 'category' ? 'category' : 'post';
-              return (
-                <Link
-                  as={`/${item.object}/${slug}`}
-                  href={`/${actualPage}?slug=${slug}&apiRoute=${item.object}`}
-                  key={item.ID}
-                  className="navbar__items"
-                >
-                  <a>{item.title}</a>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-        {/* <div className="dropdown bb flex justify-center items-center dn-l">
-          <select
-            onChange={handleSelectChange}
-          >
-            <option value={false}>Menu</option>
-            {menu.items.map(item => {
-              if (item.object === 'custom') {
-                return (
-                  <option
-                    value={item.url}
-                    key={item.ID}
-                  >
-                    {item.title}
-                  </option>
-                );
-              }
-              const slug = getSlug(item.url);
-              const actualPage = item.object === 'category' ? 'category' : 'post';
-              return (
-                <option
-                  value={`/${actualPage}?slug=${slug}&apiRoute=${item.object}`}
-                  key={item.ID}
-                >
-                  {item.title}
-                </option>
-              );
-            })}
-          </select>
-        </div> */}
-      </div>
+        </nav>
+      </header>
     );
   }
 }

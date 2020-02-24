@@ -5,14 +5,12 @@ import WPAPI from 'wpapi';
 import Layout from '../components/Layout';
 import PageWrapper from '../components/PageWrapper';
 import Menu from '../components/Menu';
-import MainCTAButton from '../components/MainCTAButton';
-import ContentDivider from '../components/ContentDivider';
-import Arrow from '../components/Arrow';
-import HowItWorksItem from '../components/HowItWorksItem';
+import CompanyLogoContainer from '../components/CompanyLogoContainer';
+import FeatureItem from '../components/FeatureItem';
+import BreadcrumbArea from '../components/BreadcrumbArea';
+import GameImage from '../components/GameImage';
 import ProcessItem from '../components/ProcessItem';
-import CompositionImage from '../components/CompositionImage';
 import Config from '../config';
-import Logo from '../static/images/neurofit-logo.svg';
 
 const wp = new WPAPI({ endpoint: Config.apiUrl });
 
@@ -50,90 +48,87 @@ class Index extends Component {
   render() {
     
     const { headerMenu, page } = this.props;
-    const howItWorkItems = page.acf.how_it_works_items.map((item, i)=>{
-      return(<HowItWorksItem 
-        key={i}
-        heading={item.how_it_works_heading} 
-        image_title={item.how_it_works_image.title} 
-        image_alt={item.how_it_works_image.alt} 
-        image_src={item.how_it_works_image.url} 
-        paragraph={item.how_it_works_paragraph}
-      />)
+
+    const CompanyLogoImages = page.acf.header_content.featured_brands_logo.map((item, i)=>{
+      return <CompanyLogoContainer key={i} url={item.featured_brands_logo} />
     });
 
-    const processItems = page.acf.process_items.map((item, i)=>{
-      return(<ProcessItem 
-        key={i}
-        heading={item.process_item_title}
-        image_src={item.process_item_image}
-        paragraph={item.process_item_paragraph}
-      />)
+    const FeatureContentBlocks = page.acf.feature_items.map((item, i)=>{
+      return (
+        <FeatureItem 
+          key={i}
+          reverse={((i + 1) % 2) ? false : true}
+          image={item.feature_item.feature_image}
+          heading={item.feature_item.feature_heading}
+          paragraph={item.feature_item.feature_paragraph}
+        />
+      );
     });
 
-    const imageCompositionSection = page.acf.image_composition_section.map((item, i)=>{
-      return <CompositionImage key={i} alt={item.image.alt} url={item.image.url} image_class={`composition__photo composition__photo--p${i+1}`} />
-    })
+    const GameImages = page.acf.game_images.map((item, i)=>{
+      return <GameImage key={i} image={item.game_image} heading={item.image_heading} fadeInDelay={(i+6)} />
+    });
+
+    const ProcessItems = page.acf.process_section.process_items.map((item, i)=>{
+      return (
+        <ProcessItem
+          key={i}
+          reverse={((i + 1) % 2) ? false : true}
+          heading={item.process_heading}
+          paragraph={item.process_paragraph}
+          image={item.process_image}
+          icon={item.process_icon}
+        />
+      )
+    });
+
+
+
+
 
     console.log(page.acf)
     
     return (
       <Layout title="Home Page">
-        <Menu menu={headerMenu} />
-        <div className="header" style={{backgroundImage: `url(${page.acf.header_image})`}}>
-          <div className="header__logo">
-            <Logo width={440} height={500} />
+        <Menu menu={headerMenu} companyLogo={page.acf.company_logo} />
+        <section className="tracking_banner_area text-center">
+          <div className="tracking_banner_content">
+              <h3 className="wow fadeInUp" data-wow-delay="0.8s">{page.acf.header_content.normal_text} <strong>{page.acf.header_content.strong_text}</strong> </h3>
+              <p className="wow fadeInUp" data-wow-delay="0.9s">
+                {page.acf.header_content.contact_info}
+                <i style={{fontSize:'12px', transform: 'translateY(-4px)'}}>{page.acf.header_content.formerly_text}</i>
+              </p>
+              <img className="wow fadeIn" data-wow-delay="0.9s" src="/static/images/neurofit-logo.svg" alt="" style={{height: '630px'}} />
           </div>
-          <div className="header__title">
-            <h1 className="header__title--main">{page.acf.header_main_heading}</h1>
-            <h2 className="header__title--sub">{page.acf.header_sub_heading}</h2>
-            <div className="header__cta">
-                <MainCTAButton text={page.acf.request_demo_cta.button_text} url={page.acf.request_demo_cta.button_url} color="white" />         
+          <div className="row tracking_software_logo wow fadeInUp" data-wow-delay="0.9s">
+            {CompanyLogoImages}
+          </div>
+        </section>
+        <section className="service_promo_area">
+          <div className="s_features_section">
+            <div className="container custom_container">
+              {FeatureContentBlocks}
             </div>
+          </div>
+        </section>
+        <BreadcrumbArea image={page.acf.breadcrumb_section.background_image} heading={page.acf.breadcrumb_section.heading} paragraph={page.acf.breadcrumb_section.paragraph} />
+        <div className="container custom_container" style={{marginTop: '100px', marginBottom: '100px'}}>
+          <div className="row portfolio_gallery mb-50" id="work-portfolio">
+            {GameImages}
           </div>
         </div>
-        <div className="main">
-          <section className="our-vision u-max-container-width">  
-            <h3 className="our-vision__heading">{page.acf.our_vision_heading}</h3>
-            <div className="our-vision__vector-wrapper">
-              <h4 className="our-vision__sub-heading">{page.acf.our_vision_sub_heading}</h4>
-              <p className="our-vision__paragraph">{page.acf.our_vision_paragraph}</p>
-              <img src={page.acf.our_vision_background_vector} className="our-vision__vector" />
+        <BreadcrumbArea image={page.acf.breadcrumb_section.background_image} heading={page.acf.breadcrumb_section.heading} paragraph={page.acf.breadcrumb_section.paragraph} />
+        <section className="process_area bg_color sec_pad">
+          <div className="container">
+            <div className="features_info">
+                <img className="dot_img" src={page.acf.process_section.process_background} alt=""/>
+                {ProcessItems}
             </div>
-          </section>
-          <section className="how-it-works u-max-container-width">
-            <h3 className="how-it-works__heading">{page.acf.how_it_works_heading}</h3>
-            <h4 className="how-it-works__sub-heading">"{page.acf.how_it_works_sub_heading}"</h4>
-            <p className="how-it-works__paragraph">{page.acf.how_it_works_paragraph}</p>
-          </section> 
-          <Arrow alt={page.acf.arrow.alt} url={page.acf.arrow.url} title={page.acf.arrow.title}></Arrow>
-          <section className="what-we-do u-max-container-width">
-            <h4 className="what-we-do__heading section__heading">{page.acf.how_it_works_items_title}</h4>
-            <div className="what-we-do__items">
-              {howItWorkItems}
+            <div className="centered_btn">
+              <a href="#" className="btn_hover agency_banner_btn mt_30 center">Request A Demo</a>
             </div>
-          </section>
-          <section className="the-process u-max-container-width">
-            <h4 className="the-process__heading section__heading">{page.acf.process_items_title}</h4>
-            <div className="the-process__layout">
-              <div className="the-process__items">
-                {processItems}
-              </div>
-              <div className="the-process__images">
-                <div className="composition" style={{display: 'none'}}>
-                  {imageCompositionSection}
-                </div>
-              </div>
-              <div className="headset-featured">
-                <div className="headset-featured__image">
-                  <img src={page.acf.headset_image.url} alt={page.acf.headset_image.alt}/>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className="cta">
-            <MainCTAButton text={page.acf.request_demo_cta.button_text} url={page.acf.request_demo_cta.button_url} color="white" />         
-          </section>
-        </div>
+          </div>
+        </section>
       </Layout>
     );
   }
