@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import Link from 'next/link';
 import Router from 'next/router';
 import Config from '../config';
-import Logo from '../static/images/neurofit-logo.svg';
 
 const getSlug = url => {
 
@@ -79,7 +78,7 @@ class Menu extends Component {
               </button>
               <div className="collapes navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav m-auto menu">
-                  {menu.items.map((item, i) => {
+                  {/* {menu.items.map((item, i) => {
                     if (item.object === 'custom') {
                       return (
                         <li key={i} className="nav-item">
@@ -87,7 +86,7 @@ class Menu extends Component {
                         </li>
                       );
                     }
-                  })}
+                  })} */}
                 </ul>
                 <div className="tracking_btn">
                   <a className="er_btn btn_hover" href="#get-app">Request A Demo</a>

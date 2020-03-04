@@ -332,7 +332,8 @@
 	-------------------------------------------------------------------------------*/
     function app_testimonialSlider() {
         var app_testimonialSlider = $(".app_testimonial_slider");
-        if (app_testimonialSlider.length) {
+        console.log(app_testimonialSlider)
+        if (app_testimonialSlider) {
             app_testimonialSlider.owlCarousel({
                 loop: true,
                 margin: 10,
@@ -347,6 +348,8 @@
                 navContainer: '.nav_container'
             })
         }
+        console.log(app_testimonialSlider)
+
     }
     app_testimonialSlider();
 

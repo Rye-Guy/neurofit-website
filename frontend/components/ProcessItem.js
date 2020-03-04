@@ -2,9 +2,9 @@ import React from 'react';
 
 const ProcessItem = ({reverse, image, icon, heading, paragraph}) =>{
     return(
-        <div className={reverse ? 'row agency_featured_item mt-0 flex-row-reverse' : 'row agency_featured_item agency_featured_item_two'}>
+        <div style={{paddingBottom: '96px', marginTop: '0'}} className={reverse ? 'row agency_featured_item mt-0 flex-row-reverse' : 'row agency_featured_item agency_featured_item_two'}>
           <div className="col-md-6">
-            <div className={reverse ? 'agency_featured_img text-right wow fadeInRight' : 'agency_featured_img text-right wow fadeInLeft'} data-wow-delay="0.9">
+            <div className={reverse ? 'agency_featured_img text-right wow fadeInRight' : 'agency_featured_img text-right mb-80 wow fadeInLeft'} data-wow-delay="0.9">
                 <img src={image} alt="" />
             </div>
           </div>
@@ -13,7 +13,7 @@ const ProcessItem = ({reverse, image, icon, heading, paragraph}) =>{
                     <div className="dot"><span className="dot1"></span><span className="dot2"></span></div>
                     <img className="number" src={icon} alt=""/>
                     <h3>{heading}</h3>
-                    <p style={{marginBottom: '142px'}}>{paragraph}</p>
+                    <p>{paragraph}</p>
               </div>
           </div>
         </div>

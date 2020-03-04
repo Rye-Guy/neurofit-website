@@ -88,6 +88,12 @@
             .img_rounded{
                 border-radius: 6px;
                 width: 300px;
+                transition: ease-in-out all .2s;
+                border: outset 8px transparent;
+
+                &:hover {
+                    border: outset 8px rgba(121, 74, 253, 0.9);
+                }
             }
             .hover_content{
                 position: absolute;

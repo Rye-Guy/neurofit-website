@@ -292,8 +292,9 @@
         color: #4069eb;
         padding: 14px 40px;
         &:hover{
-            border-color: #4069eb;
-            background:#4069eb;
+            
+            border-color: #6754e2;
+            background:#6754e2;
             color: #fff;
         }
     }
@@ -1199,3 +1200,9 @@
   }
 }
 
+.curved-arrow{
+    position: absolute;
+    opacity: 0.08;
+    transform: rotate(-40deg) translate(-50px, -260px);
+    top: 240px;
+}

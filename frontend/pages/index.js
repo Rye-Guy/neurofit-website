@@ -10,6 +10,9 @@ import FeatureItem from '../components/FeatureItem';
 import BreadcrumbArea from '../components/BreadcrumbArea';
 import GameImage from '../components/GameImage';
 import ProcessItem from '../components/ProcessItem';
+import Testimonials from '../components/Testimonial';
+import ContactForm from '../components/ContactForm';
+import MainCTABtn from '../components/MainCTABtn';
 import Config from '../config';
 
 const wp = new WPAPI({ endpoint: Config.apiUrl });
@@ -65,6 +68,7 @@ class Index extends Component {
       );
     });
 
+
     const GameImages = page.acf.game_images.map((item, i)=>{
       return <GameImage key={i} image={item.game_image} heading={item.image_heading} fadeInDelay={(i+6)} />
     });
@@ -82,8 +86,30 @@ class Index extends Component {
       )
     });
 
+    const HowItWorksItems = page.acf.how_it_works_section.process_items.map((item, i)=>{
+      return (
+        <ProcessItem
+          key={i}
+          reverse={((i + 1) % 2) ? false : true}
+          heading={item.process_heading}
+          paragraph={item.process_paragraph}
+          image={item.process_image}
+          icon={item.process_icon}
+        />
+      )
+    });
 
-
+    const STestimonal = page.acf.testimonials.testimonial.map((item, i)=>{
+      return (
+        <Testimonials
+          key={i}
+          image={item.testimonial_image}
+          heading={item.testimonial_name}
+          sub_heading={item.testimonial_title}
+          paragraph={item.testimonial_body}
+        />
+      )
+    })
 
 
     console.log(page.acf)
@@ -93,12 +119,16 @@ class Index extends Component {
         <Menu menu={headerMenu} companyLogo={page.acf.company_logo} />
         <section className="tracking_banner_area text-center">
           <div className="tracking_banner_content">
-              <h3 className="wow fadeInUp" data-wow-delay="0.8s">{page.acf.header_content.normal_text} <strong>{page.acf.header_content.strong_text}</strong> </h3>
+              <h3>{page.acf.header_content.normal_text} <strong>{page.acf.header_content.strong_text}</strong> </h3>
+              <img className="curved-arrow" src={page.acf.header_content.curved_arrow}/>
               <p className="wow fadeInUp" data-wow-delay="0.9s">
                 {page.acf.header_content.contact_info}
                 <i style={{fontSize:'12px', transform: 'translateY(-4px)'}}>{page.acf.header_content.formerly_text}</i>
               </p>
-              <img className="wow fadeIn" data-wow-delay="0.9s" src="/static/images/neurofit-logo.svg" alt="" style={{height: '630px'}} />
+              <img style={{position: 'relative', zIndex: '1', height: '630px'}}  src="/static/images/neurofit-logo.svg" alt="" />
+          </div>
+          <div className="row" style={{justifyContent: 'center'}}>
+              <MainCTABtn button_text={page.acf.main_cta_button.button_text} button_href={page.acf.button_destionation}></MainCTABtn>
           </div>
           <div className="row tracking_software_logo wow fadeInUp" data-wow-delay="0.9s">
             {CompanyLogoImages}
@@ -124,10 +154,35 @@ class Index extends Component {
                 <img className="dot_img" src={page.acf.process_section.process_background} alt=""/>
                 {ProcessItems}
             </div>
-            <div className="centered_btn">
-              <a href="#" className="btn_hover agency_banner_btn mt_30 center">Request A Demo</a>
+          </div>
+        </section>
+        <BreadcrumbArea image={page.acf.breadcrumb_section.background_image} heading={page.acf.breadcrumb_section.heading} paragraph={page.acf.breadcrumb_section.paragraph} />
+        <section className="process_area bg_color sec_pad">
+          <div className="container">
+            <div className="features_info">
+                <img className="dot_img" src={page.acf.process_section.process_background} alt=""/>
+                {HowItWorksItems}
             </div>
           </div>
+          <div className="row" style={{justifyContent: 'center', paddingBottom: '96px'}}>
+            <MainCTABtn button_text={page.acf.main_cta_button.button_text} button_href={page.acf.button_destionation}></MainCTABtn>
+          </div>
+        </section>
+        <section className="app_testimonial_area" style={{paddingTop: '0px'}}>
+          <div className="text_shadow" data-line="Feedback"></div>
+          <div className="container nav_container">
+            <div className="shap one"></div>
+            <div className="shap two"></div>
+            <div className="container">
+              <h2 style={{textAlign: 'center', fontSize: '38px'}} className="f_size_30 f_600 t_color3 l_height40 text-center mb_60 wow fadeInLeft" data-wow-delay="0.7s">{page.acf.testimonials.testimonials_heading}</h2>
+              <div className="">
+                {STestimonal}
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="container">
+          <ContactForm />
         </section>
       </Layout>
     );

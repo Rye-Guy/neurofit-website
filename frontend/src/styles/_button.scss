@@ -217,14 +217,14 @@
 
 .app_btn{
     box-shadow: 0px 20px 30px 0px rgba(12, 0, 46, 0.1);
-    background-color: rgb(64, 105, 235);
+    background-color: #6754e2;
     display: inline-block;
     padding: 14px 40px;
-    color: #fff;
+    color: #fff !important;
     border-radius: 45px;
-    border: 1px solid rgb(64, 105, 235);
+    border: 1px solid #6754e2;
     &:hover{
-        color: rgb(64, 105, 235);
+        color: #6754e2 !important;
         background: #fbfbfd;
         box-shadow: none;
     }
@@ -325,4 +325,8 @@
         margin-top: -170px;
         transform: translateX(0px);
     }
+}
+
+.logo-svg{
+    width: 100px;
 }
