@@ -568,6 +568,8 @@
 }
     
 .agency_featured_item{
+    align-items: center;
+    text-align: center;
     margin-top: 130px;
     .agency_featured_content{
         position: relative;
@@ -578,6 +580,7 @@
         }
         p{
             font-size: 15px;
+            margin: 0;
         }
         .icon{
             width: 46px;
@@ -1648,4 +1651,9 @@
         left: -10px;
         top: 21px;
     }
+}
+
+
+.agency_featured_img img {
+    max-width: 65%;
 }

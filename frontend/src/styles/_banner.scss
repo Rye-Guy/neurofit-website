@@ -1206,3 +1206,9 @@
     transform: rotate(-40deg) translate(-50px, -260px);
     top: 240px;
 }
+
+@media screen and (max-width: 800px){
+    .curved-arrow{
+        display: none;
+    }   
+}

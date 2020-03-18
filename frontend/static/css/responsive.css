@@ -86,7 +86,7 @@
         padding-left: 70px;
     }
     .agency_featured_img img{
-        max-width: 100%;
+        max-width: 65%;
     }
     .about_content_left {
         padding: 0px 0px 0px 50px;
@@ -1611,15 +1611,12 @@
         right: 30px;
         top: 30px;
     }
-    .agency_featured_item .agency_featured_img{
-        text-align: left !important;
-    }
+
     .agency_content{
         max-width: 500px;   
     }
     .agency_featured_item .agency_featured_content{
         padding-left: 0px;
-        margin-top: 50px;
     }
     .product_details_area .pr_details,.service_details_item + .service_details_item{
         margin-top: 50px;
