@@ -12,6 +12,7 @@ const wp = new WPAPI({ endpoint: Config.apiUrl });
 
 class Category extends Component {
   static async getInitialProps(context) {
+
     const { slug } = context.query;
 
     const categories = await wp

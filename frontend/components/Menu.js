@@ -76,7 +76,7 @@ class Menu extends Component {
                         </span>
                     </span>
               </button>
-              <div className="collapes navbar-collapse" id="navbarSupportedContent">
+              <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav m-auto menu">
                   {/* {menu.items.map((item, i) => {
                     if (item.object === 'custom') {

@@ -2119,3 +2119,25 @@
         }
     } 
 }
+
+
+@media (max-width: 500px){
+    .menu_one .container-fluid{
+        padding: 28px;
+        font-size: 16px;
+    }
+
+    .menu_one .tracking_btn .er_btn {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+
+    .fat-btn {
+        width: 200px;
+        height: 43.5px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        font-size: 14px;
+    }
+}

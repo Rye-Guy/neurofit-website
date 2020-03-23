@@ -21,3 +21,7 @@ $p-color:#677294;
     &::-moz-placeholder { @content; }
     &::-webkit-input-placeholder { @content; }
 }
+
+.collapse:not(.show) {
+    display: none;
+}

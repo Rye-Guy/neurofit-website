@@ -37,9 +37,7 @@ class Index extends Component {
 
       return { page, posts, pages };
     } catch (err) {
-      if (err.data.status === 403) {
-        tokenExpired();
-      }
+      console.log(err)
     }
 
     return null;
