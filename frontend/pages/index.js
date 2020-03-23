@@ -71,7 +71,7 @@ class Index extends Component {
 
 
     const GameImages = page.acf.game_images.map((item, i)=>{
-      return <GameImage key={i} image={item.game_image} heading={item.image_heading} fadeInDelay={(i+6)} />
+      return <GameImage key={i} image={item.game_image} heading={item.image_heading} fadeInDelay={(i+3)} />
     });
 
     const ProcessItems = page.acf.process_section.process_items.map((item, i)=>{
@@ -121,7 +121,7 @@ class Index extends Component {
         <section className="tracking_banner_area text-center">
           <div className="tracking_banner_content">
               <h3>{page.acf.header_content.normal_text} <strong>{page.acf.header_content.strong_text}</strong> </h3>
-              <p className="wow fadeInUp" data-wow-delay="0.9s">
+              <p className="wow fadeInUp" data-wow-delay="0.35s">
                 {page.acf.header_content.contact_info}
                 <i style={{fontSize:'12px', transform: 'translateY(-4px)'}}>{page.acf.header_content.formerly_text}</i>
               </p>
@@ -130,7 +130,7 @@ class Index extends Component {
           <div className="row" style={{justifyContent: 'center'}}>
               <MainCTABtn fat={true} button_text={page.acf.main_cta_button.button_text} button_href={page.acf.main_cta_button.button_destination}></MainCTABtn>
           </div>
-          <div className="row tracking_software_logo wow fadeInUp" data-wow-delay="0.9s">
+          <div className="row tracking_software_logo wow fadeInUp" data-wow-delay="0.4s">
             {CompanyLogoImages}
           </div>
         </section>

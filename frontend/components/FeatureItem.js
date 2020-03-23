@@ -15,7 +15,7 @@ const FeatureItem = ({reverse, image, heading, paragraph, button_text, button_hr
                         <i className="ti-eye"></i>
                     </div>
                     <h2 className={reverse ? 'f_p f_size_30 f_700 t_color l_height45 wow fadeInLeft' : 'f_p f_size_30 f_700 t_color l_height45 wow fadeInRight'} data-wow-delay="0.4s">{heading}</h2>
-                    <p className={reverse ? 'f_size_18 l_height30 f_400 wow fadeInLeft' : 'f_size_18 l_height30 f_400 wow fadeInRight'} data-wow-delay="0.5s">{paragraph}</p>
+                    <p className={reverse ? 'f_size_18 l_height30 f_400 wow fadeInLeft' : 'f_size_18 l_height30 f_400 wow fadeInRight'} data-wow-delay="0.4s">{paragraph}</p>
                     {/* <a className={reverse ? 'learn_btn wow fadeInLeft' : 'learn_btn wow fadeInRight'}  data-wow-delay="0.6s">Request a demo!<i className="ti-arrow-right"></i></a> */}
                     <MainCTABtn fat={false} button_text={button_text} button_href={button_href}></MainCTABtn>
                 </div>
