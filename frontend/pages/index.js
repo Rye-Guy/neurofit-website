@@ -116,7 +116,7 @@ class Index extends Component {
     console.log(page.acf)
     
     return (
-      <Layout title="Home Page">
+      <Layout title="Neurofit | Home">
         <Menu menu={headerMenu} companyLogo={page.acf.company_logo} />
         <section className="tracking_banner_area text-center">
           <div className="tracking_banner_content">

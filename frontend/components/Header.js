@@ -4,9 +4,9 @@ import stylesheet from '../src/styles/style.scss';
 
 const Header = ({title}) => (
   <Head>
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charSet="utf-8" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161723184-1"></script>
     <title>{title}</title>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/static/vendors/bootstrap-selector/css/bootstrap-select.min.css" />

@@ -12,8 +12,8 @@ const Footer = () => (
             <p>2020 Neurofit</p>
             <div className="f_social_icon">
               <a href="https://www.facebook.com/neurofitvr" className="ti-facebook"></a>
-              <a href="https://twitter.com/neurofitvr" className="ti-instagram"></a>
-              <a href="https://www.instagram.com/neurofitvr" className="ti-twitter-alt"></a>
+              <a href="https://www.instagram.com/neurofitvr" className="ti-instagram"></a>
+              <a href="https://twitter.com/neurofitvr" className="ti-twitter-alt"></a>
               <a href="https://www.linkedin.com/company/neurofitvr" className="ti-linkedin"></a>
             </div>
           </div>

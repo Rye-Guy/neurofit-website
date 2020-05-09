@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
-import Link from 'next/link';
-import Router from 'next/router';
-import Config from '../config';
+// import Link from 'next/link';
+// import Router from 'next/router';
+// import Config from '../config';
 
 const getSlug = url => {
 
@@ -61,7 +61,7 @@ class Menu extends Component {
         <nav className="navbar navbar-expand-lg menu_one" data-spy="affix" data-offset-top="70"  ref={this.navRef}>
             <div className="container-fluid">
               <div className="navbar-brand">
-                <Link href="/"><a className="navbar-brand"><img src={companyLogo} width={72} height={72}/></a></Link>
+                <a className="navbar-brand" href="/"><img src={companyLogo} width={72} height={72}/></a>
               </div>
                 <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="menu_toggle">
@@ -88,8 +88,11 @@ class Menu extends Component {
                     }
                   })} */}
                 </ul>
+                <div className="tracking_btn" style={{marginRight: '18px'}}>
+                  <a className="er_btn btn_hover" href="https://alex501627.typeform.com/to/yAatQk">Request A Demo</a>
+                </div>
                 <div className="tracking_btn">
-                  <a className="er_btn btn_hover" href="#get-app">Request A Demo</a>
+                  <a className="er_btn btn_hover" href="https://neurofit.ca/neurofit.html">Use Neurofit</a>
                 </div>
               </div>
           </div>
