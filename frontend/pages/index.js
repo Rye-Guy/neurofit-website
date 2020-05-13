@@ -146,6 +146,7 @@ class Index extends Component {
           <div className="row portfolio_gallery mb-50" id="work-portfolio">
             {GameImages}
           </div>
+          <iframe className="wow fadeInUp" data-wow-delay="0.5s" style={{display: 'block', margin: 'auto', marginTop: '82px', }} width="560" height="315" src="https://www.youtube.com/embed/XxvXuijex5o" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </div>
         <BreadcrumbArea image={page.acf.breadcrumb_section.background_image} heading={page.acf.process_section.process_heading} paragraph={page.acf.breadcrumb_section.paragraph} />
         <section className="process_area bg_color sec_pad">
