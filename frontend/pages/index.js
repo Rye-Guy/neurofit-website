@@ -116,11 +116,11 @@ class Index extends Component {
     console.log(page.acf)
     
     return (
-      <Layout title="Neurofit | Home">
+      <Layout title="Neurofit | Home" description="Neurofit home page, get the lastest news and learn more about what we do. Request a demo and get it in your hands soon.">
         <Menu menu={headerMenu} companyLogo={page.acf.company_logo} />
         <section className="tracking_banner_area text-center">
           <div className="tracking_banner_content">
-              <h3>{page.acf.header_content.normal_text} <strong>{page.acf.header_content.strong_text}</strong> </h3>
+              <h1>{page.acf.header_content.normal_text} <strong>{page.acf.header_content.strong_text}</strong></h1>
               <p className="wow fadeInUp" data-wow-delay="0.35s">
                 {page.acf.header_content.contact_info}
                 <i style={{fontSize:'12px', transform: 'translateY(-4px)'}}>{page.acf.header_content.formerly_text}</i>
@@ -146,7 +146,7 @@ class Index extends Component {
           <div className="row portfolio_gallery mb-50" id="work-portfolio">
             {GameImages}
           </div>
-          <iframe className="wow fadeInUp" data-wow-delay="0.5s" style={{display: 'block', margin: 'auto', marginTop: '82px', }} width="560" height="315" src="https://www.youtube.com/embed/XxvXuijex5o" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          <iframe className="wow fadeInUp video_embed" data-wow-delay="0.5s" style={{display: 'block', margin: 'auto', marginTop: '82px', }} width="560" height="315" src="https://www.youtube.com/embed/U8cGP73ITZs" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </div>
         <BreadcrumbArea image={page.acf.breadcrumb_section.background_image} heading={page.acf.process_section.process_heading} paragraph={page.acf.breadcrumb_section.paragraph} />
         <section className="process_area bg_color sec_pad">

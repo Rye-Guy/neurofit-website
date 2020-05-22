@@ -1287,6 +1287,11 @@
 
 
 @media (max-width:991px){
+    .video_embed{
+        margin: 0 auto;
+        width: 80%;
+    }
+
     .menu_scroll .alter_nav{
         position: relative;
         right: 0;

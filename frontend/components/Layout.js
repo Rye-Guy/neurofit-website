@@ -5,12 +5,12 @@ import Footer from './Footer';
 import Preloader from './Preloader';
 
 const Layout = props => {
-  const { children, title } = props;
+  const { children, title, description } = props;
   return (
     <div>
       <Preloader></Preloader>
       <div className="body_wrapper">
-        <Header title={title}/>
+        <Header title={title} description={description} />
         <main>
           {children}
         </main>
