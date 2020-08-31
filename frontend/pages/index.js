@@ -116,7 +116,7 @@ class Index extends Component {
     console.log(page.acf)
     
     return (
-      <Layout title="Neurofit | Home" description="Neurofit home page, get the lastest news and learn more about what we do. Request a demo and get it in your hands soon.">
+      <Layout title="Neurofit | Home" description="Our Vision. Holistic healthcare for you. Using Virtual Reality (VR) to bring together patient and practitioner to inspire, motivate, and personalize your care.">
         <Menu menu={headerMenu} companyLogo={page.acf.company_logo} />
         <section className="tracking_banner_area text-center">
           <div className="tracking_banner_content">
